@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Landing Page-Watch Website</title>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+}
+#header {
+  height: max-content;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  background-color: rgb(18, 17, 17);
+  padding: 1rem 0;
+  position: sticky;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  box-shadow: 0 6px 31px -2px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 800px) {
+  #header {
+    text-align: center;
+    height: auto;
+  }
+}
+.header-content-div {
+  max-width: 98rem;
+  width: auto;
+  margin: 0 auto;
+}
+@media (max-width: 991px) {
+  .header-content-div {
+    max-width: 85rem;
+  }
+}
+#header-img {
+  height: 6rem;
+  width: auto;
+}
+@media (max-width: 800px) {
+  #header-img {
+    height: 5rem;
+  }
+}
+nav {
+  position: relative;
+  top: 0.9rem;
+  float: right;
+  font-size: 1.7rem;
+  font-weight: 500;
+  padding: 1.6rem 0;
+}
+@media (max-width: 800px) {
+  nav {
+    position: static;
+    float: none;
+    font-size: 1.5rem;
+    padding: 0.7rem 1rem;
+  }
+}
+.nav-link {
+  text-decoration: none;
+  color: #266859 ;
+  margin: 0 0.5rem;
+  padding: 0 0.6rem;
+  transition: border-bottom 0.5s;
+}
+@media (max-width: 475px) {
+  .nav-link {
+    margin: 0 0.2rem;
+    padding: 0 0.2rem;
+    font-size: 1.2rem;
+  }
+}
+.nav-link:hover {
+  color: #682652db ;
+  border-bottom: 5px solid #0b12e8;
+}
+.nav-link:active {
+  color: #08d0ea;
+}
+.flexible {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+.home-sec {
+  font-family: "Montserrat", sans-serif;
+  background-color: #0c0c0d;
+  text-align: start;
+  min-height: 50rem;
+  height: auto;
+  margin: 0 auto 0rem auto;
+  justify-content: start;
+  max-width: 85rem;
+  color: #feffff;
+}
+@media (max-width: 800px) {
+  .home-sec {
+    flex-flow: column wrap;
+    max-width: 100%;
+  }
+}
+.eye-grabber {
+  flex: 1;
+  padding: 1rem;
+}
+@media (max-width: 800px) {
+  .eye-grabber {
+    max-width: max-content;
+    padding-bottom: 8rem;
+  }
+}
+.eye-grabber h1 {
+  font-size: 5rem;
+  line-height: 1.0;
+  font-weight: 600;
+}
+.eye-grabber h2 {
+  font-size: 2.0rem;
+  font-weight: 500;
+  color: #e3f707;
+}
+.eye-grabber-img {
+  flex: 1;
+}
+@media (max-width: 800px) {
+  .eye-grabber-img {
+    width: 100%;
+  }
+}
+.eye-grabber-img img {
+  max-width: 100%;
+}
+.btn {
+  border: none;
+  font-size: 2rem;
+  border-radius: 0.4rem;
+  padding: 2rem;
+  background-color: #08d7ea;
+  color: #000000;
+  outline: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background-color: #190fe3ed;
+  cursor: pointer;
+}
+.btn:active {
+  transform: scale(0.9);
+}
+.section-heading {
+  font-size: 2.5rem;
+  font-family: "Serif", sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0;
+  padding: 5rem 0 5rem 0;
+  text-align: center;
+}
+.sec-content-div {
+  -webkit-text-fill-color: #fafafa;
+  font-size: 2rem;
+  text-align: start;
+  padding: 0 2rem 5rem 2rem;
+  width: auto;
+  justify-content: space-around;
+  max-width: 95rem;
+  margin: 0 auto;
+}
+.sec-padding {
+  padding: 8rem 0 10rem 0;
+}
+#about {
+  background-color: #2132e3;
+}
+#about img {
+  max-width: 100%;
+  height: auto;
+  background-color: rgb(18, 98, 227);
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 31px -2px rgba(12, 19, 232, 0.951);
+}
+#varieties {
+  background-color: #000000;
+  -webkit-text-fill-color: #0615ee;
+}
+.tile {
+  background-color: #00c3ff;
+  height: 40rem;
+  width: 25rem;
+  box-shadow: 0 10px 20px rgba(35, 4, 236, 0.992), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+  padding: 1rem;
+  margin: 1rem;
+}
+@media (max-width: 680px) {
+  .tile {
+    width: auto;
+    max-width: 100%;
+    min-width: 20rem;
+    margin: 1.5rem auto;
+    height: auto;
+  }
+}
+.tile img {
+  width: 100%;
+  max-width: 48rem;
+  border-radius: 0.5rem;
+}
+.tile h4 {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1rem 0;
+  color: #02f5f9;
+  margin: 0;
+}
+.tile p {
+  -webkit-text-fill-color: #000809;
+  font-size: 1.6rem;
+  padding: 0;
+  margin: 0;
+}
+.tile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgb(20, 20, 21), 0 16px 16px rgba(0, 0, 0, 0.23);
+}
+#our-service {
+  background-color: #0418f1f9;
+}
+#watch{
+  height:100vh;
+  width:100%;
+  background: url(watch.mp4);
+  background-size: cover;
+  background-position: center center;
+}
+.bars {
+  height: max-content;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  margin: 2rem;
+  width: 100%;
+}
+@media (max-width: 990px) {
+  .bars {
+    flex-flow: column wrap;
+  }
+  .icon-container {
+    margin: 0 2.5rem;
+  }
+}
+.bars .icon-container {
+  max-width: 10rem;
+  flex: 1;
+}
+.icon-container img {
+  max-height: 100%;
+  max-width: 100%;
+}
+.bars .txt-container {
+  flex: 2;
+  padding: 3rem;
+}
+
+.txt-container h5 {
+  -webkit-text-fill-color: #e8eff3;
+  font-size: 4rem;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+.txt-container p {
+  -webkit-text-fill-color: #000000;
+  font-size: 2.3rem;
+}
+footer {
+  font-size: 1.4rem;
+  background-color: #000000;
+  text-align: center;
+  padding: 2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  color: #fbfdff;
+}
+footer a {
+  color:  #467AA0 ;
+  text-decoration: none;
+}</style>
+  </head>
+  <body>
+    <header id="header">
+      <div class="header-content-div">
+        <a href="#home-sec">
+          <img src="clogo.png"alt="Company Logo"id="header-img"/></a>
+        <nav id="nav-bar">
+          <a href="#about" class="nav-link">ABOUT</a>
+          <a href="#varieties" class="nav-link">VARIETIES</a>
+          <a href="#our-service" class="nav-link">OUR SERVICE</a>
+          <a href="#contact" class="nav-link">CONTACT</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section id="home-sec" class="flexible home-sec">
+        <div class="eye-grabber-img">
+          <img src="https://5.imimg.com/data5/SELLER/Default/2023/1/YX/DR/MQ/17476908/whatsapp-image-2022-12-30-at-6-47-52-pm-1-.jpeg" alt="watches" />
+        </div>
+        <div class="eye-grabber">
+          <h1>World-class watch for you</h1>
+          <h2>Crafted using the finest materials available, from precious metals like gold and platinum to high-quality stainless steel to keep you Classy round the clock.They're convenient and portable, so you can take them with you wherever you go.
+          </h2>
+          <button class="btn" onclick="window.location.href = '#contact';">
+            Buy Now
+          </button>
+        </div>
+      </section>
+      <section id="about" class="sec-padding">
+        <h3 class="section-heading">ABOUT US</h3>
+        <div class="sec-content-div flexible">
+          <p>✨ Why Meena Watches?<br> We have quality you can trust ,Impeccable craftsmanship and premium materials ensure durability and style that lasts.  Discover watches for every occasion – because your style is as unique as your journey.The half minute which we daily devote to the winding-up of our watches is an exertion of labor almost insensible; yet, by the aid of a few wheels, its effect is spread over the whole twenty-four hours.<br><em>Go ahead of the ticking life</em></p>
+          <img src="https://petapixel.com/assets/uploads/2022/05/The-Science-Behind-Why-Watches-are-Set-to-10-10-in-Advertising-Photos.jpg" alt="A man plucking apples from the tree" />
+        </div>
+      </section>
+      <section id="varieties" class="sec-padding">
+        <h3 class="section-heading">VARIETIES</h3>
+        <div class="sec-content-div flexible">
+          <div class="tile">
+            <img src="https://ad.kapoorwatch.com/content/images/product/W4BB0028-400.jpg" alt="watch" />
+            <h4>Breitling</h4>
+            <p> In the last 130 years, they have established themselves amongst the greats and many horology connoisseurs who have made it their only goal to buy a Breitling</p>
+          </div>
+          <div class="tile">
+            <img src="https://4.imimg.com/data4/LP/PR/MY-26510561/2.jpg"alt="Rolex Daytona"/>
+            <h4>Rolex </h4>
+            <p>Rolex watches have never come cheap, but neither were they out of financial reach for 1960s working professionals in search of perfect timekeeping and technical innovation.</p>
+          </div>
+          <div class="tile">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/w570-1670596148.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="w1" />
+            <h4>Montblanc</h4>
+            <p>Fine state-of-the-art craftsmanship is at the heart of every Montblanc timepiece, and especially in the Montblanc 1858 collection, which is a reinterpretation of 1920s and '30s Minerva watches </p>
+          </div>
+          <div class="tile">
+            <img src="https://revolutionwatch.com/cdn-cgi/image/width=1500,height=1000,fit=crop,quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/2023/12/03-FC-Highlife-Tourbillon-PC.jpg" alt="w2" />
+            <h4>Frédérique Constant</h4>
+            <p>
+                Founded in 1988 by Dutch couple Peter Stas and Aletta Stas-Bax, Frédérique Constant's mission statement is to craft fine luxury watches using Swiss techniques but sold at a relatively accessible price point. </p>
+          </div>
+          <div class="tile">
+            <img src="https://superwatchman.com/wp-content/uploads/2023/01/Blancpain-Fifty-Fathoms-Nageurs-de-Combat-Limited-Edition-3.webp" alt="w3" />
+            <h4>Blancpain</h4>
+            <p>
+                Founded in 1735, Blancpain enjoys the esteemed distinction of being the oldest watch brand in the world. In the 1950s, it introduced the Fifty Fathoms diving watches, which were crafted in collaboration with the French Navy's combat swimmers and soon became the standard issue of the US Navy SEALs.
+            </p>
+          </div>
+          <div class="tile">
+            <img src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/idw2Qa5uQcps/v2/-1x-1.jpg" alt="w4" />
+            <h4>Patek Philippe</h4>
+            <p>Patek Philippe stands for the high quality and dependability of its timepieces. In emphasizing its independence, the family-owned manufacture has always defined its own quality criteria, recognized by the entire watchmaking community as the strictest ever compiled.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="our-service" class="sec-padding">
+        <h3 class="section-heading">OUR SERVICE</h3>
+        <div class="sec-content-div">
+          <div class="bars">
+            <div class="icon-container">
+              <img src="https://i.ibb.co/w6H542X/Fresh.png" alt="" />
+            </div>
+            <div class="txt-container">
+              <h5>Time with Perfection</h5>
+              <p>Stay connected without being tied down.
+                The ultimate phone accessory.
+                Keep your hands free and your mind at ease.</p>
+            </div>
+          </div>
+          <div class="bars">
+            <div class="icon-container">
+              <img src="https://i.ibb.co/FKNq4Qr/delivered.png" alt="" />
+            </div>
+            <div class="txt-container">
+              <h5>Fast</h5>
+              <p>
+                We deliver your orders as fast as possible, delivery procedure
+                begins as soon as your order gets ready.
+              </p>
+            </div>
+          </div>
+          <div class="bars">
+            <div class="icon-container">
+              <img src="https://i.ibb.co/HHQK1wV/happy.png" alt="" />
+            </div>
+            <div class="txt-container">
+              <h5>Satisfying</h5>
+              <p>
+                We guarantee 100% customer satisfaction. We do our best to make
+                your purchase experience smooth. But if we mess up somehow you
+                will get compensated for every inconvenience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>  
+      <section  id="watch"class="sec-padding">
+          </section>
+
+    </main>
+    <footer>
+        Elegance is an attitude @ Abi Watch& Co Pvt,Ltd.
+    </footer>
+  </body>
+</html>
